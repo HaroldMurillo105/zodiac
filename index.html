@@ -1,0 +1,89 @@
+<!DOCTYPE html>	
+<html>
+<head>
+	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+	<body> 
+       <div class="zs">
+            <h1>Zodiac Sign</h1>
+            <p>Your Birth Month:</p><p><input type="text" id='No'/></p>
+            <p>Your Birth Date :</p><p><input type="text" id='date'/></p>
+            <br>
+            <div class="bt">
+          <p><input type="button" onclick='generate()'  value="OKAY"/></p> </p> 
+        </div>
+        <br>
+            <p>Your Zodiac Sign is</p>
+            <br>
+            <p id="zodiac" ></p>
+        </div>   
+      <script>
+  function generate(){
+  var birthmonth = document.getElementById("No").value;
+var birthday = document.getElementById("date").value;
+ var zodiacsign = " No result, please type the correct birthdate and birthmonth in number format";
+
+
+if (birthmonth == 1&& birthday >= 20 || birthmonth == 2 && birthday <= 18)
+{
+    zodiacsign  = ("Aquarius");
+    }
+    if (birthmonth == 2&& birthday >= 19 || birthmonth == 3&& birthday <= 20)
+    {
+        zodiacsign = ("Pisces");
+      
+    }
+   if (birthmonth == 3&& birthday >= 21 || birthmonth == 4 && birthday <= 19)
+   {
+    zodiacsign = ("Aries");
+
+   }
+    if (birthmonth == 4&& birthday >= 20|| birthmonth == 5 && birthday <= 20)
+    {
+        zodiacsign= ("Taurus");
+    }
+  
+    if (birthmonth == 5&& birthday >= 21 || birthmonth == 6 && birthday <= 20)
+    {
+        zodiacsign= ("Gemini");
+    }
+  
+    if (birthmonth == 6&& birthday >= 21 || birthmonth == 7&& birthday <= 22)
+    {
+        zodiacsign= ("Cancer");
+    }
+    if (birthmonth == 7&& birthday >= 23 || birthmonth == 8 && birthday <= 22)
+    {
+        zodiacsign = ("Leo");
+    }
+    if (birthmonth == 8 && birthday >= 23 || birthmonth == 9 && birthday <= 22)
+    {
+        zodiacsign= ("Virgo");
+    }
+    if (birthmonth == 9&& birthday >= 23 || birthmonth == 10&& birthday <= 22)
+    {
+        zodiacsign = ("Libra")
+    }
+    if (birthmonth == 10 && birthday >= 23|| birthmonth == 11 && birthday <= 21)
+    {
+        zodiacsign = ("Scorpio");
+    }
+    if (birthmonth == 11 && birthday >= 22 || birthmonth == 12 && birthday <= 21)
+    {
+        zodiacsign = ("Sagittarius");
+    }
+  
+  if(birthmonth == 12 && birthday >= 22 || birthmonth == 1 && birthday <= 19)
+  {
+ 
+    zodiacsign = ("Capricorn");
+    }
+ document.getElementById("zodiac").innerHTML= zodiacsign;
+               
+            }
+
+             </script>     
+	</body>
+</html>
